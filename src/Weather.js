@@ -3,13 +3,20 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    setWeatherData({
+      ready: true,
+      city: response.data.name,
+      date: "Thursday 12:00",
+      description: response.data.weather[0].description,
+      humidity: response.data.main.humidity,
+      iconUrl: "https://ssi.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+    });
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="App">
         <div className="row">
@@ -17,25 +24,26 @@ export default function Weather() {
             <div className="card" styles="width: 150px">
               <div className="card-body">
                 <p className="today-temperature">
-                  <span>11°</span>
+                  <span>{Math.round(weatherData.temperature)}°</span>
                   <br />
                   <a href="/">C</a> |<a href="/"> F</a>
                 </p>
+                <img src={weatherData.imgUrl} alt={weatherData.description} />
               </div>
             </div>
           </div>
           <div className="col-8">
-            <h1>Vancouver</h1>
+            <h1>{weatherData.city}</h1>
             <h3>
-              Last updated: <span>Thursday 19:58</span>
+              Last updated: <span>{weatherData.date}</span>
             </h3>
             <ul>
-              <li>Sunny</li>
+              <li>{weatherData.description}</li>
               <li>
-                Humidity: <span>60</span>%
+                Humidity: <span>{weatherData.humidity}</span>%
               </li>
               <li>
-                Wind Speed: <span>3</span> km/hr
+                Wind Speed: <span>{weatherData.wind}</span> km/hr
               </li>
             </ul>
           </div>
