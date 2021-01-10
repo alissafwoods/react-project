@@ -48,7 +48,7 @@ export default function Weather(props) {
                   <br />
                   <a href="/">C</a> |<a href="/"> F</a>
                 </p>
-                <WeatherIcon code={props.data.icon} />
+                <WeatherIcon code={weatherData.icon} />
               </div>
             </div>
           </div>
