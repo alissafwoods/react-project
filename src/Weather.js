@@ -4,6 +4,7 @@ import "./Weather.css";
 import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -67,6 +68,7 @@ export default function Weather(props) {
             </ul>
           </div>
         </div>
+        <WeatherForecast city={weatherData.city} />
         <br />
         <div className="row">
           <div className="col-7">
