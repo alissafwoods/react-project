@@ -1,0 +1,79 @@
+.wrapper {
+  max-width: 700px;
+  padding: 3%;
+}
+
+.container {
+  background: #cfdcd4;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #c1c3c1;
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 3%;
+}
+h1,
+h3,
+h4 {
+  color: #989b99;
+  font-family: "Bitter", serif;
+}
+h1 {
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  color: #989b99;
+  font-family: "Bitter", serif;
+  font-size: 15px;
+  list-style: none;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+p {
+  color: #989b99;
+  font-family: monospace;
+}
+
+.card-body {
+  padding: 5px;
+}
+
+.card {
+  background: #dfe9e2;
+  border-color: #c1c3c1;
+  border-width: 2px;
+}
+.card-text {
+  font-size: 12px;
+  text-align: center;
+}
+
+.time {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 1px;
+}
+.today-temperature {
+  font-size: 30px;
+  text-align: center;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  font-size: 15px;
+}
+
+.col-2 {
+  padding: 1px 3px 1px 3px;
+}

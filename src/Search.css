@@ -1,0 +1,36 @@
+form {
+  color: #989b99;
+  font-family: "Bitter", serif;
+  font-size: 13px;
+  font-weight: thin;
+}
+input,
+text {
+  background-color: #dfe9e2;
+  border: none;
+  border-radius: 4px;
+}
+input,
+submit {
+  color: #989b99;
+}
+
+#submit:hover {
+  background-color: #989b99;
+  color: #dfe9e2;
+}
+
+button {
+  background-color: #dfe9e2;
+  border: none;
+  border-radius: 4px;
+  color: #989b99;
+  font-family: "Bitter", serif;
+  font-size: 13px;
+  font-weight: thin;
+}
+
+button:hover {
+  background-color: #989b99;
+  color: #dfe9e2;
+}
