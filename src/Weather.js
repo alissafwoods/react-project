@@ -43,7 +43,7 @@ export default function Weather(props) {
       <div className="App">
         <div className="row">
           <div className="col-4">
-            <div className="card" styles="width: 150px">
+            <div className="card mb-4 border-0">
               <div className="card-body">
                 <p className="today-temperature">
                   <WeatherTemperature celsius={weatherData.temperature} />
@@ -70,9 +70,10 @@ export default function Weather(props) {
         </div>
         <WeatherForecast city={weatherData.city} />
         <br />
-        <div className="row">
-          <div className="col-7">
-            <form onSubmit={handleSubmit}>
+
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-4">
               <input
                 type="search"
                 autocomplete="off"
@@ -80,15 +81,13 @@ export default function Weather(props) {
                 autoFocus="on"
                 onChange={handleCityChange}
               />
+            </div>
+
+            <div className="col-3">
               <input type="submit" value="Search" />
-            </form>
+            </div>
           </div>
-          <div className="col-5">
-            <button id="current-location-button">Current Location</button>
-          </div>
-        </div>
-        <br />
-        <script src="src/script.js"></script>
+        </form>
       </div>
     );
   } else {

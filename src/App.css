@@ -1,6 +1,6 @@
-.wrapper {
+.App {
   max-width: 700px;
-  padding: 3%;
+  margin: 30px auto;
 }
 
 .container {
@@ -9,21 +9,17 @@
   border-style: solid;
   border-color: #c1c3c1;
   margin: 20px auto;
-  max-width: 700px;
   padding: 3%;
 }
+
 h1,
-h3,
 h4 {
   color: #989b99;
-  font-family: "Bitter", serif;
-}
-h1 {
-  letter-spacing: 2px;
+  font-family: monospace;
 }
 
-h3 {
-  font-size: 15px;
+h1 {
+  letter-spacing: 2px;
 }
 
 ul {
@@ -32,48 +28,40 @@ ul {
 
 li {
   color: #989b99;
-  font-family: "Bitter", serif;
-  font-size: 15px;
+  font-family: monospace;
+  font-size: 17px;
   list-style: none;
 }
 
 li:first-letter {
   text-transform: capitalize;
 }
+
 p {
   color: #989b99;
   font-family: monospace;
 }
 
 .card-body {
+  background: #ceddd3;
   padding: 5px;
 }
 
-.card {
-  background: #dfe9e2;
-  border-color: #c1c3c1;
-  border-width: 2px;
-}
-.card-text {
-  font-size: 12px;
-  text-align: center;
-}
-
-.time {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 1px;
-}
 .today-temperature {
   font-size: 30px;
   text-align: center;
 }
 
-#celsius-link,
-#fahrenheit-link {
-  font-size: 15px;
+.temperature,
+.unit {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.col-2 {
-  padding: 1px 3px 1px 3px;
+footer {
+  color: #989b99;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: center;
 }
