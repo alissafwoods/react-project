@@ -73,7 +73,7 @@ export default function Weather(props) {
 
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-4">
+            <div className="col-5">
               <input
                 type="search"
                 autocomplete="off"
